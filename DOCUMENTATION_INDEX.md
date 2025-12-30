@@ -11,11 +11,26 @@ This document addresses the request: "Please review the code and explain the log
 
 ## 文档指南 / Documentation Guide
 
-我们创建了两个详细的文档来全面解释程序：
+我们创建了多个详细的文档来全面解释程序：
 
-We have created two comprehensive documents to fully explain the program:
+We have created multiple comprehensive documents to fully explain the program:
 
-### 1. [PROGRAM_LOGIC.md](PROGRAM_LOGIC.md) - 程序逻辑文档
+### 1. [FORMULA_EXPLAINED.md](FORMULA_EXPLAINED.md) - 公式详解 ⭐ NEW
+
+**内容包括 / Contents include:**
+- 归一化互相关公式的详细数学推导 / Detailed mathematical derivation of normalized cross-correlation
+- 分子、分母各部分的含义 / Meaning of numerator and denominator components
+- 完整的计算示例 / Complete calculation examples
+- 归一化的目的和数学背景 / Purpose of normalization and mathematical background
+- 在 FMF 中的实现细节 / Implementation details in FMF
+- 多台站网络扩展说明 / Multi-station network extension explanation
+
+**适合读者 / Suitable for:**
+- 想要深入理解核心算法的研究人员 / Researchers wanting deep understanding of core algorithm
+- 需要了解数学原理的开发者 / Developers needing to understand mathematical principles
+- 学习信号处理和相关分析的学生 / Students learning signal processing and correlation analysis
+
+### 2. [PROGRAM_LOGIC.md](PROGRAM_LOGIC.md) - 程序逻辑文档
 
 **内容包括 / Contents include:**
 - 程序概述和目的 / Program overview and purpose
@@ -32,7 +47,7 @@ We have created two comprehensive documents to fully explain the program:
 - 需要使用或集成该库的用户 / Users who need to use or integrate the library
 - 对匹配滤波算法感兴趣的研究人员 / Researchers interested in matched filter algorithms
 
-### 2. [CODE_REVIEW.md](CODE_REVIEW.md) - 代码审查文档
+### 3. [CODE_REVIEW.md](CODE_REVIEW.md) - 代码审查文档
 
 **内容包括 / Contents include:**
 - 代码结构审查 / Code structure review
@@ -71,6 +86,9 @@ CC(t) = Σ [T(i) × D(t+i)] / sqrt(Σ T(i)² × Σ D(t+i)²)
 - `CC(t)` = 时间 t 的相关系数 / correlation coefficient at time t
 - `T(i)` = 模板波形 / template waveform
 - `D(t+i)` = 数据波形 / data waveform
+
+📖 **详细的公式解释请参阅 [FORMULA_EXPLAINED.md](FORMULA_EXPLAINED.md)**  
+📖 **For detailed formula explanation, see [FORMULA_EXPLAINED.md](FORMULA_EXPLAINED.md)**
 
 ### 主要特性 / Key Features
 
@@ -275,12 +293,18 @@ Fast Matched Filter is a well-designed, high-performance seismic processing tool
    - 阅读 PROGRAM_LOGIC.md 了解详细工作原理 / Read PROGRAM_LOGIC.md for detailed working principles
    - 查看使用示例 / Review usage examples
 
-2. **开发者 / Developers**:
+2. **想要理解公式的读者 / Readers Who Want to Understand the Formula**:
+   - 直接阅读 FORMULA_EXPLAINED.md / Read FORMULA_EXPLAINED.md directly
+   - 查看详细的数学推导和计算示例 / Review detailed mathematical derivations and calculation examples
+   - 理解归一化的目的和实现 / Understand the purpose of normalization and implementation
+
+3. **开发者 / Developers**:
    - 阅读 CODE_REVIEW.md 了解代码质量 / Read CODE_REVIEW.md for code quality insights
    - 查看改进建议 / Review improvement recommendations
    - 参考架构图进行修改 / Refer to architecture diagrams for modifications
 
-3. **研究人员 / Researchers**:
+4. **研究人员 / Researchers**:
+   - 阅读 FORMULA_EXPLAINED.md 深入理解算法 / Read FORMULA_EXPLAINED.md for deep algorithm understanding
    - 阅读算法基础部分 / Read algorithm fundamentals section
    - 参考学术论文 / Refer to academic paper
    - 理解性能特征 / Understand performance characteristics
